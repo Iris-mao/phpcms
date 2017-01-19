@@ -1,0 +1,17 @@
+*~
+*.cache.php
+
+database.php
+error_log.php
+
+/.idea
+/html/
+/caches/caches_commons/
+/caches/caches_content/
+/caches/caches_model/
+/caches/caches_search/
+/caches/caches_template/
+/caches/configs/system.php
+/phpsso_server/caches/configs/system.php
+/uploadfile/
+/index.html

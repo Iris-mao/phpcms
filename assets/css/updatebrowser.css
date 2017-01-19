@@ -1,0 +1,10 @@
+body { margin: 0; padding: 0; }
+.warning-body { width: 900px; padding-top: 100px; margin: 0 auto; overflow: hidden; }
+.warning-body .warning-title { background: url(../../assets/images/updatebrowser/rocket.png) 0 0 no-repeat; height: 120px; }
+.warning-body .warning-title p { font-size: 26px; padding: 20px 0 0 100px; height: 120px;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "SimHei", "WenQuanYi Micro Hei"; }
+.warning-tips { margin-top: 30px; }
+.warning-tips p { margin-left: 100px; display: inline; color: #5b5b5b; }
+.warning-tips a { text-decoration: none; font-size: 18px; color: #1f55b0; margin-right: 10px; }
+.warning-tips a:hover { text-decoration: underline; }
+.warning-tips img { padding-right: 5px; border: none; }

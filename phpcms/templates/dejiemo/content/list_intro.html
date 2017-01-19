@@ -1,0 +1,23 @@
+{template "content","header"}
+<div class="clear"></div>
+<div class="main" style="border-top: 1px solid #ededee;">
+	<div class="main-body">
+		{template "content","bread"}
+		<div>
+			<h2>企业简介</h2>
+			<div class="line-blue"></div>
+			<div class="text">
+				{pc:content moreinfo="1" action="lists" catid="$catid" num="10" order="id DESC" page="$page"}
+				{loop $data $r}
+				<span class="text-bk">背景资料</span>
+				<span class="text-time"><span class="time"></span>发布于{date('Y',$r[inputtime])}年{date('m',$r[inputtime])}月{date('d',$r[inputtime])}日</span>
+				<p class="text-details">
+					{$r[content]}
+					{/loop}
+					{/pc}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+{template "content","footer"}

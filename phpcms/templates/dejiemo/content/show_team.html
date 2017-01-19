@@ -1,0 +1,21 @@
+{template "content","header"}
+<div class="clear"></div>
+<div class="main" style="border-top: 1px solid #ededee;">
+	<div class="main-body">
+		{template "content","bread"}
+		<div class="text" style="position: relative;">
+			<h2 class="text-title" style="text-align: center;">{$title}</h2>
+			<span class="text-time"><span class="time"></span>
+                <!--发布于{date('Y',$r[inputtime])}年{date('m',$r[inputtime])}月{date('d',$r[inputtime])}日</span>-->
+				发布于{$inputtime}</span>
+			<div class="clear"></div>
+			<p class="text-details" style="text-align: center;">
+				{$content}
+			</p>
+
+		</div>
+		<a class="change-left" href="{$previous_page[url]}"></a>
+		<a class="change-right" href="{$next_page[url]}"></a>
+	</div>
+</div>
+{template "content","footer"}

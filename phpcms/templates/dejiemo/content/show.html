@@ -1,0 +1,35 @@
+{template "content","header"}
+<div class="clear"></div>
+<div class="main" style="border-top: 1px solid #ededee;">
+	<div class="main-body">
+		{template "content","bread"}
+		<div style="width: 200px;float: left;">
+			<h2>{$CATEGORYS[$catid]['catname']}</h2>
+			<div class="line-blue"></div>
+			<div class="list-left">
+				<ul>
+					{pc:content action="lists" catid="$catid" order="id DESC" page="$page" num="10" }
+					{loop $data $r}
+					{php $class=''}
+					{php if ($r[id]==$id) $class='class="active"'}
+					<li {$class}>
+						<a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],30)}</a>
+					</li>
+					{/loop}
+					{/PC}
+				</ul>
+				<div id="pages" class="text-c" style="margin-top: 20px;">{$pages}</div>
+			</div>
+		</div>
+		<div class="text" style="margin-left: 400px;">
+			<h2 class="text-title">{$title}</h2>
+			<span class="text-bk">背景资料</span>
+			<span class="text-time"><span class="time"></span>
+                发布于{date('Y',$r[inputtime])}年{date('m',$r[inputtime])}月{date('d',$r[inputtime])}日</span>
+			<p class="text-details">
+				{$content}
+			</p>
+		</div>
+	</div>
+</div>
+{template "content","footer"}
